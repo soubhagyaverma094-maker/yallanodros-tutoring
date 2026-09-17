@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yallanodros Tutoring — Dubai</title>
+<meta name="description" content="Private tutor in Dubai offering English, French, and Arabic lessons for adults and kids. Conversation, writing, reading — built around the learner, not the curr">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="" rel="stylesheet">
+<style>
+      /* === Video Section === */
+      .video-section { position: relative; width: 100%; height: 420px; overflow: hidden; }
+      .video-wrapper { position: relative; width: 100%; height: 100%; }
+      .video-wrapper video {
+        position: absolute; top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100%; min-height: 100%;
+        width: auto; height: auto;
+        object-fit: cover;
+      }
+      .video-overlay {
+        position: absolute; inset: 0;
+        background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+        z-index: 1;
+      }
+      .video-caption {
+        position: absolute; bottom: 40px; left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        text-align: center;
+        color: #fff;
+        padding: 0 30px;
+      }
+      .video-caption h2 { font-size: 1.6rem; margin-bottom: 8px; }
+      .video-caption p { opacity: 0.7; font-size: 0.95rem; max-width: 500px; margin: 0 auto; }
+      .section-inner { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+      .section-title { font-size: 1.7rem; margin-bottom: 8px; }
+      .section-sub { opacity: 0.6; max-width: 520px; line-height: 1.6; }
+      .gallery-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; margin: 30px 0; }
+      .gallery-card { cursor: pointer; animation: fade-up 0.5s ease-out both; }
+      .gallery-card:nth-child(2){ animation-delay: 0.1s; }
+      .gallery-card:nth-child(3){ animation-delay: 0.2s; }
+      .gallery-card-img {
+        width: 100%; height: 190px; border-radius: 14px; overflow: hidden;
+        background: #1a1a2e; position: relative;
+      }
+      .gallery-card-img img { width: 100%; height: 100%; object-fit: cover; }
+      .gallery-card:hover .gallery-card-img { animation: pulse-glow 1.4s ease-in-out; }
+      .gallery-label { text-align: center; font-size: 0.8rem; margin-top: 10px; opacity: 0.65; text-transform: uppercase; }
+      .stats-row { display: flex; gap: 24px; margin-top: 20px; flex-wrap: wrap; }
+      .stat-item {
+        background: rgba(255,255,255,0.04); padding: 22px 18px;
+        border-radius: 14px; text-align: center; min-width: 130px; flex: 1;
+        border: 1px solid rgba(255,255,255,0.06);
+        animation: fade-up 0.5s ease-out both;
+      }
+      .stat-item:nth-child(2){ animation-delay: 0.1s; }
+      .stat-item:nth-child(3){ animation-delay: 0.2s; }
+      .stat-num { font-size: 1.9rem; font-weight: 700; color: #fff; display: block; }
+      .stat-label { font-size: 0.72rem; opacity: 0.5; margin-top: 4px; display: block; }
+      .hero-bg-img {
+        position: absolute; inset: 0; z-index: 0;
+        background-size: cover; background-position: center;
+        opacity: 0.35;
+      }
+      .hero-content { position: relative; z-index: 1; }
+      .hero-cta.shimmer {
+        background: linear-gradient(90deg, #fff 0%, #aaa 50%, #fff 100%);
+        background-size: 200% 100%;
+        animation: shimmer 2.5s infinite;
+      }
+      @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+      @keyframes pulse-glow { 0%,100%{box-shadow:0 0 20px rgba(255,255,255,0.08)} 50%{box-shadow:0 0 35px rgba(255,255,255,0.18)} }
+      @keyframes fade-up { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+      @keyframes scale-in { from{opacity:0;transform:scale(0.92)} to{opacity:1;transform:scale(1)} }
+      @keyframes shimmer { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
+
+      /* === Enriched gallery + stats === */
+      @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+      @keyframes pulse-glow { 0%,100%{box-shadow:0 0 20px rgba(255,255,255,0.08)} 50%{box-shadow:0 0 35px rgba(255,255,255,0.18)} }
+      @keyframes fade-up { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+      @keyframes scale-in { from{opacity:0;transform:scale(0.92)} to{opacity:1;transform:scale(1)} }
+      @keyframes shimmer { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
+      
+      .gallery-section { margin: 50px 0; }
+      .section-inner { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+      .section-title { font-size: 1.7rem; margin-bottom: 8px; }
+      .section-sub { opacity: 0.6; max-width: 520px; line-height: 1.6; font-size: 1rem; }
+      
+      .gallery-grid {
+        display: grid; grid-template-columns: repeat(3,1fr); gap: 22px;
+        margin: 30px 0;
+      }
+      .gallery-card { cursor: pointer; animation: fade-up 0.5s ease-out both; }
+      .gallery-card:nth-child(2){ animation-delay: 0.1s; }
+      .gallery-card:nth-child(3){ animation-delay: 0.2s; }
+      
+      .gallery-card-img {
+        width: 100%; height: 190px; border-radius: 14px; overflow: hidden;
+        background: #1a1a2e; position: relative;
+        transition: transform 0.3s ease;
+      }
+      .gallery-card-img img { width: 100%; height: 100%; object-fit: cover; }
+      .gallery-card:hover .gallery-card-img { animation: pulse-glow 1.4s ease-in-out; transform: scale(1.02); }
+      
+      .gallery-label {
+        text-align: center; font-size: 0.8rem; margin-top: 10px;
+        opacity: 0.65; letter-spacing: 0.4px; text-transform: uppercase;
+      }
+      
+      .stats-row {
+        display: flex; gap: 24px; margin-top: 20px; flex-wrap: wrap;
+      }
+      .stat-item {
+        background: rgba(255,255,255,0.04); padding: 22px 18px;
+        border-radius: 14px; text-align: center; min-width: 130px; flex: 1;
+        border: 1px solid rgba(255,255,255,0.06);
+        animation: fade-up 0.5s ease-out both;
+      }
+      .stat-item:nth-child(2){ animation-delay: 0.1s; }
+      .stat-item:nth-child(3){ animation-delay: 0.2s; }
+      .stat-num { font-size: 1.9rem; font-weight: 700; color: #fff; display: block; }
+      .stat-label { font-size: 0.72rem; opacity: 0.5; margin-top: 4px; display: block; }
+      
+      /* Hero background image */
+      .hero-bg-img {
+        position: absolute; inset: 0; z-index: 0;
+        background-size: cover; background-position: center;
+        opacity: 0.35;
+      }
+      .hero-content { position: relative; z-index: 1; }
+      
+      /* Shimmer CTA */
+      .hero-cta.shimmer {
+        background: linear-gradient(90deg, #fff 0%, #aaa 50%, #fff 100%);
+        background-size: 200% 100%;
+        animation: shimmer 2.5s infinite;
+      }
+
+
+:root {
+  --bg: #0c0f14;
+  --text: #e4e8ee;
+  --muted: #8894a0;
+  --accent: #3a5a7a;
+  --tag: #3a5a7a;
+  --divider: rgba(228,232,238,0.07);
+  --glow: rgba(58,90,122,0.05);
+  --cta-bg: transparent;
+  --cta-text: #3a5a7a;
+  --cta-border: #3a5a7a;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Helvetica Neue', system-ui, sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+/* TheGallery-style grain overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; position: relative; z-index: 1; }
+
+/* ---------- HERO ---------- */
+.hero {
+  position: relative;
+  padding: 120px 0 80px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 50% 25%, var(--glow), transparent 70%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 130px;
+  background: linear-gradient(to bottom, transparent, rgba(11,13,18,0.5));
+}
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--tag);
+  margin-bottom: 32px;
+  font-weight: 500;
+}
+.hero-tagline {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text);
+  opacity: 0.45;
+  margin-bottom: 36px;
+}
+.hero h1 {
+  font-family: 'Georgia', serif;
+  font-size: clamp(42px, 8vw, 92px);
+  font-weight: 300;
+  letter-spacing: -2.5px;
+  line-height: 1.02;
+  max-width: 22ch;
+  margin-bottom: 28px;
+  color: var(--text);
+}
+.hero h1 .accent { color: var(--accent); font-weight: 400; }
+.hero p {
+  font-size: clamp(15px, 2.2vw, 20px);
+  color: var(--muted);
+  max-width: 56ch;
+  margin-bottom: 44px;
+}
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  background: var(--cta-bg);
+  color: var(--cta-text);
+  border: 1px solid var(--cta-border);
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.25s;
+  position: relative;
+  z-index: 1;
+}
+.cta:hover { transform: translateY(-2px); opacity: 1; }
+.cta .info { font-weight: 400; opacity: 0.6; font-size: 11px; letter-spacing: 0; text-transform: none; }
+.hero-meta {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 18px 28px;
+  background: linear-gradient(to top, rgba(11,13,18,0.7), transparent);
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* ---------- DIVIDERS & SECTIONS ---------- */
+.divider {
+  height: 1px;
+  background: var(--divider);
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.section { padding: 90px 0; position: relative; z-index: 1; }
+.section-label {
+  font-size: 11px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--tag);
+  margin-bottom: 40px;
+}
+.section h2 {
+  font-family: 'Georgia', serif;
+  font-size: clamp(24px, 4vw, 44px);
+  font-weight: 300;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+  max-width: 24ch;
+  color: var(--text);
+}
+.section .sub {
+  color: var(--muted);
+  font-size: 14px;
+  max-width: 52ch;
+  margin-top: 14px;
+}
+
+/* ---------- CARDS ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0;
+  margin-top: 48px;
+  border-top: 1px solid var(--divider);
+}
+.card {
+  padding: 36px 0;
+  border-bottom: 1px solid var(--divider);
+  position: relative;
+}
+.card-num {
+  width: 28px; height: 1px;
+  background: var(--accent);
+  margin-bottom: 18px;
+}
+.card-title {
+  font-family: 'Georgia', serif;
+  font-size: 21px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  letter-spacing: -0.2px;
+  color: var(--text);
+}
+.card-desc {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* ---------- NARRATIVE ---------- */
+.narrative {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  margin-top: 32px;
+}
+.narrative p {
+  color: var(--muted);
+  font-size: 15px;
+  margin-bottom: 20px;
+  max-width: 44ch;
+}
+@media (max-width: 700px) {
+  .narrative { grid-template-columns: 1fr; gap: 28px; }
+}
+
+/* ---------- SPECS ---------- */
+.specs {
+  display: flex;
+  gap: 52px;
+  padding: 48px 0;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--divider);
+  border-bottom: 1px solid var(--divider);
+  margin: 48px 0 0;
+}
+.spec-item {
+  text-align: center;
+}
+.spec-num {
+  font-family: 'Georgia', serif;
+  font-size: 44px;
+  font-weight: 200;
+  color: var(--accent);
+  letter-spacing: -2px;
+  display: block;
+  margin-bottom: 6px;
+}
+.spec-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--muted);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  padding: 70px 0 40px;
+  border-top: 1px solid var(--divider);
+  margin-top: 50px;
+  position: relative;
+  z-index: 1;
+}
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.footer-name {
+  font-size: 18px;
+  font-weight: 200;
+}
+.footer-name .accent { color: var(--accent); }
+.footer-note {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.footer-cta {
+  font-size: 13px;
+  color: var(--muted);
+}
+.footer-cta a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--divider);
+}
+.footer-cta a:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ---------- SLIDING LINE (TheGallery-style) ---------- */
+.sl {
+  position: absolute;
+  bottom: 44px;
+  right: 44px;
+  width: 1px;
+  height: 56px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  animation: sl 2.8s ease-in-out infinite;
+  z-index: 1;
+}
+@keyframes sl {
+  0%, 100% { opacity: 0.4; transform: translateY(0); }
+  50% { opacity: 0.08; transform: translateY(12px); }
+}
+@media (max-width: 600px) {
+  .hero { padding: 80px 0 60px; min-height: auto; }
+  .section { padding: 60px 0; }
+  .specs { gap: 24px; }
+  .sl { display: none; }
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Private Tutoring · Dubai · UAE</div>
+    <div class="hero-tagline">English · French · Arabic · IELTS · GCSE · A-Level.</div>
+    <h1><span class="accent">Yallanodros Tutoring</span></h1>
+    <p>Private English, French, and Arabic tutoring in Dubai — conversation-first, built around your goals.</p>
+    <a class="cta" href="https://wa.me/971501234567" target="_blank" rel="noopener">#3a5a7a<span class="info">Message via directory listing</span></a>
+  </div>
+  <div class="sl"></div>
+  <div class="hero-meta">Built by GetMyWebsite · getmywebsite.co.in</div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-label">What they offer</div>
+    <h2>A tutor's best work happens in a session, not on a…</h2>
+    <div class="sub">Three things Yallanodros Tutoring does that matter — all day, every day.</div>
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-num"></div>
+        <div class="card-title">Language Tutoring — English</div>
+        <div class="card-desc">Private English lessons for adults and children — conversation, writing, and reading, built around your level and what you actually want to be able to do.</div>
+      </div>
+      <div class="card">
+        <div class="card-num"></div>
+        <div class="card-title">Language Tutoring — French & Arabic</div>
+        <div class="card-desc">French and Arabic private lessons for all levels — conversation-focused, paced to the learner, not the textbook.</div>
+      </div>
+      <div class="card">
+        <div class="card-num"></div>
+        <div class="card-title">IELTS & Academic Prep</div>
+        <div class="card-desc">English support for IELTS, GCSE, and A-Level — structured, paced, and tracked against the target, so the result is a result, not a feeling.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-label">Consider this</div>
+    <h2>Why a tutoring needs a proper site</h2>
+    <div class="narrative">
+
+        <p>A tutor's best work happens in a session, not on a page. But people decide to book the session based on what they can find out beforehand — what the tutor teaches, how the sessions work, whether it's the right fit.</p>
+        <p>A site gives parents and students that picture before they commit — subjects, approach, how to book. Without it, they're choosing on a directory listing and a name.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="wrap">
+    <div class="specs">
+
+      <div class="spec-item">
+        <span class="spec-num">1</span>
+        <span class="spec-label">Conversation-First</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-num">2</span>
+        <span class="spec-label">All Levels</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-num">3</span>
+        <span class="spec-label">Tracked Progress</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="video-section">
+      <div class="video-wrapper">
+        <video autoplay muted loop playsinline poster="media/poster.jpg">
+          <source src="media/video.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+        <div class="video-caption">
+          <h2>Welcome</h2>
+          <p>Experience the best in class service and ambiance.</p>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="gallery-section">
+      <div class="section-inner">
+        <h2 class="section-title">What We Offer</h2>
+        <p class="section-sub">A glimpse into what makes us special.</p>
+        <div class="gallery-grid">
+                    <div class="gallery-card">
+            <div class="gallery-card-img"><img src="https://images.unsplash.com/photo-1580531416943-747d7d944f2a?w=600&h=400&fit=crop" alt="One-on-One"></div>
+            <p class="gallery-label">One-on-One</p>
+          </div>
+          <div class="gallery-card">
+            <div class="gallery-card-img"><img src="https://images.unsplash.com/photo-1434496248903-0221541c41c7?w=600&h=400&fit=crop" alt="Study Materials"></div>
+            <p class="gallery-label">Study Materials</p>
+          </div>
+          <div class="gallery-card">
+            <div class="gallery-card-img"><img src="https://images.unsplash.com/photo-1503676260728-1c0be0e4a4c3?w=600&h=400&fit=crop" alt="Proven Results"></div>
+            <p class="gallery-label">Proven Results</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="video-section">
+      <div class="video-wrapper">
+        <video autoplay muted loop playsinline poster="media/poster.jpg">
+          <source src="media/video.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+        <div class="video-caption">
+          <h2>Welcome</h2>
+          <p>Experience excellence in every visit.</p>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="gallery-section">
+      <div class="section-inner">
+        <h2 class="section-title">Quick Facts</h2>
+        <div class="stats-row">
+          <div class="stat-item"><span class="stat-num">Open</span><span class="stat-label">Daily</span></div>
+          <div class="stat-item"><span class="stat-num">Quality</span><span class="stat-label">First</span></div>
+          <div class="stat-item"><span class="stat-num">Service</span><span class="stat-label">Top</span></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+  <div class="wrap">
+    <div class="footer-row">
+      <div>
+        <div class="footer-name"><span class="accent">Yallanodros Tutoring</span> — Dubai, UAE</div>
+        <div class="footer-note">Built by GetMyWebsite · getmywebsite.co.in</div>
+      </div>
+      <div class="footer-cta"><a href="https://wa.me/971501234567">Message via directory listing</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
