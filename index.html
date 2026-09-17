@@ -513,7 +513,7 @@ footer {
 
     <section class="video-section">
       <div class="video-wrapper">
-        <video autoplay muted loop playsinline poster="media/poster.jpg">
+        <video playbackRate="0.3" autoplay muted loop playsinline poster="media/poster.jpg">
           <source src="media/video.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
@@ -548,18 +548,7 @@ footer {
     </section>
 
     
-    <section class="video-section">
-      <div class="video-wrapper">
-        <video autoplay muted loop playsinline poster="media/poster.jpg">
-          <source src="media/video.mp4" type="video/mp4">
-        </video>
-        <div class="video-overlay"></div>
-        <div class="video-caption">
-          <h2>Welcome</h2>
-          <p>Experience excellence in every visit.</p>
-        </div>
-      </div>
-    </section>
+    
 
     
     <section class="gallery-section">
@@ -585,5 +574,38 @@ footer {
   </div>
 </footer>
 
+
+    <script>
+      (function() {
+        var vids = document.querySelectorAll('video[autoplay]');
+        for (var i = 0; i < vids.length; i++) {
+          vids[i].playbackRate = 0.3;
+        }
+      })();
+    </script>
+
+    <script>
+      (function() {
+        var els = document.querySelectorAll('.section, .gallery-section, .stats-row, .video-section');
+        if (!els.length) return;
+        function check() {
+          for (var i = 0; i < els.length; i++) {
+            var r = els[i].getBoundingClientRect();
+            if (r.top < window.innerHeight - 80 && r.bottom > 0) {
+              els[i].classList.add('show');
+            }
+          }
+        }
+        check();
+        var ticking = false;
+        window.addEventListener('scroll', function() {
+          if (!ticking) {
+            window.requestAnimationFrame(function() { check(); ticking = false; });
+            ticking = true;
+          }
+        }, { passive: true });
+        window.addEventListener('resize', check);
+      })();
+    </script>
 </body>
 </html>
